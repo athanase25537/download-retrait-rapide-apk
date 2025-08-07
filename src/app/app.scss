@@ -1,0 +1,81 @@
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+.gradient-text {
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+.img-center {
+    transition: scale .3s ease-in-out;
+}
+
+.img-left {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    left: -50%;
+    transition: scale .3s ease-in-out;
+}
+
+.img-right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50%;
+    z-index: -1;
+    transition: scale .3s ease-in-out;
+}
+
+.my-img:hover {
+    cursor: pointer;
+    scale: 1.03;
+}
+
+@media screen and (max-width:1023px) {
+    .img-center {
+        width: 250px !important;
+    }
+
+    .img-left,
+    .img-right {
+        width: 170px !important;
+    }
+
+    .img-left {
+        left: -45%;
+    }
+    
+    .img-right {
+        right: -45%;
+    }
+}
